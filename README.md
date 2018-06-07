@@ -18,5 +18,5 @@ Este código muestra como conectar un esp8266 a IBM IoT Platform.
 * TOKEN = Es la señal de autenticación se obtiene al generar el API.
 
 
-### Tuorial de Paso a Paso disponible en:
+### Tutorial de Paso a Paso disponible en:
 * Instructables: https://www.instructables.com/id/C%C3%B3mo-Conectar-Un-ESP8266-a-IBM-IoT-Platform/
