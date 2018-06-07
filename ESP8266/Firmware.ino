@@ -31,12 +31,6 @@ const char cmdTopic[] = "iot-2/cmd/led/fmt/json";
 //-------- Varibles para Wifi --------
 WiFiClient wifiClient;
 
-//-------- Varibles para PubSubClient --------
-PubSubClient client(server, 1883, callback, wifiClient);
-int publishInterval = 1000; // Intervalo para envio de datos al cloud. Sustituir por el que se ajuste a su necesidad
-long lastPublishMillis;
-
-
 //-------- Función para Callback --------
 void callback(char* topic, byte* payload, unsigned int payloadLength) { //Recibe un Json
   Serial.print("Message arrived [");
@@ -55,6 +49,11 @@ void callback(char* topic, byte* payload, unsigned int payloadLength) { //Recibe
   }
 
 }
+
+//-------- Varibles para PubSubClient --------
+PubSubClient client(server, 1883, callback, wifiClient);
+int publishInterval = 1000; // Intervalo para envio de datos al cloud. Sustituir por el que se ajuste a su necesidad
+long lastPublishMillis;
 
 //-------- Función Set Up --------
 void setup() {
